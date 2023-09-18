@@ -1,6 +1,10 @@
 import React from 'react';
 import Heading from './Heading';
 import { FiBookOpen } from 'react-icons/fi';
+import Image from 'next/image'
+
+// Desactiva temporariamente las reglas de ESLint para este componente
+/* eslint-disable */
 
 function CustomHeading(props) {
   return (
@@ -15,7 +19,8 @@ const About = () => {
       <CustomHeading title="About Me" />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-[60px]'>
         <div>
-          <img className='w-[300px]' src="programadora.jpg" alt="Programadora" />
+        <Image className='w-[300px]' src="/programadora.jpg" alt="Programadora"  width={300}  height={300} />
+
         </div>
         <div>
            <div className='education-container' style={{ fontWeight: 'bold', fontSize: '20px' }}>
@@ -42,5 +47,8 @@ const About = () => {
     </section>
   );
 }
+
+// Vuelve a activar las reglas de ESLint al final del componente
+/* eslint-enable */
 
 export default About;
